@@ -9,5 +9,3 @@ if x < y :
 		print(z, 'is the smallest')
 else :
 	print(y, 'is the smallest')
-
-

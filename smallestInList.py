@@ -24,4 +24,3 @@ for x in l[1:]:
 		smallest = x
 
 print(smallest)
-			

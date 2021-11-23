@@ -13,4 +13,3 @@ for word in words :
 print('Words and their frequencies are')
 for i in d :
 	print(i, d[i])
-
