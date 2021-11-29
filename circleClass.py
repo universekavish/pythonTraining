@@ -1,0 +1,63 @@
+class Circle :
+	def __init__(self, x, y, z) :
+		self.xCord = x
+		self.yCord = y
+		self.radius = z
+	
+	def __str__(self) :
+		return 'Circle(({0}, {1}), {2})'.format(self.xCord, self.yCord, self.radius)
+		
+	def circumference(self) :
+		return 2*(22/7)*(self.radius)
+		
+	def area(self) :
+		return (22/7)*(self.radius)*(self.radius)
+		
+	def centralAngle(self, l) :
+		return 360*(l/circumference)
+		
+	def areaOfSector(self, angle) :
+		return (angle/360)*(22/7)*(self.radius)*(self.radius)
+		
+	def __eq__(self, other) :
+		return self.xCord == other.xCord and self.yCord == other.yCord and self.radius == other.radius
+		
+	def scale(self, radius = 0) :
+		if self.radius + radius > 0 :
+			self.radius = self.radius + radius 	
+		else : 
+			print('Scaling not allowed ')
+			
+	def move(self, xCord = 0, yCord = 0) :
+		self.xCord = self.xCord + xCord
+		self.yCord = self.yCord + yCord
+	
+#Main App Begins Here
+C1 = Circle(2, 3, 7)
+print(C1)
+
+circumference = C1.circumference()
+print('Circumference : ', circumference)
+
+area = C1.area()
+print('Area : ', area)
+
+centralAngle = C1.centralAngle(11)
+print('centralAngle : ', centralAngle)
+
+areaOfSector = C1.areaOfSector(90)
+print('areaOfSector : ', areaOfSector)
+
+C2 = Circle(3, 4, 7)
+if C1 == C2 : 
+	print('Same circle')
+else : 
+	print('not same circle ')
+	
+# Scaling
+result = C1.scale(radius = 3)
+print('Scaled ', C1)
+
+#Moving
+result1 = C1.move(xCord = 3, yCord = 3)
+print('Moved ', C1)
