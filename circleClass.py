@@ -32,32 +32,43 @@ class Circle :
 		self.xCord = self.xCord + xCord
 		self.yCord = self.yCord + yCord
 	
+	def quadOfP(self, pX, pY) :
+		if pX > 0 and pY > 0 :
+			return 'first quadrant of the circle'
+		elif 
 #Main App Begins Here
 C1 = Circle(2, 3, 7)
 print(C1)
 
+#1
 circumference = C1.circumference()
 print('Circumference : ', circumference)
 
+#2
 area = C1.area()
 print('Area : ', area)
 
+#3
 centralAngle = C1.centralAngle(11)
 print('centralAngle : ', centralAngle)
 
+#4
 areaOfSector = C1.areaOfSector(90)
 print('areaOfSector : ', areaOfSector)
 
+#5
 C2 = Circle(3, 4, 7)
 if C1 == C2 : 
 	print('Same circle')
 else : 
 	print('not same circle ')
 	
-# Scaling
+#6 Scaling
 result = C1.scale(radius = 3)
 print('Scaled ', C1)
 
-#Moving
+#7 Moving
 result1 = C1.move(xCord = 3, yCord = 3)
 print('Moved ', C1)
+
+
